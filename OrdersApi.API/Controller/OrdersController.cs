@@ -41,6 +41,15 @@ namespace OrdersApi.API.Controller
         [HttpPost]
         public async Task<ActionResult<List<Order>>> CreateOrder([FromBody] List<Order> orders)
         {
+            if (orders == null)
+            {
+                return BadRequest("Request body is missing or invalid.");
+            }
+            if (orders.Count == 0)
+            {
+                return BadRequest("Order list cannot be empty.");
+            }
+
             try
             {
                 _logger?.LogInformation("Creating new {count} orders", orders.Count);
