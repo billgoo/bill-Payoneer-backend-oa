@@ -7,7 +7,7 @@ dotnet add package Microsoft.EntityFrameworkCore --version 9.0.0
 dotnet add package Microsoft.EntityFrameworkCore.Design --version 9.0.0
 dotnet add package Microsoft.EntityFrameworkCore.Sqlite --version 9.0.0
 dotnet add package Microsoft.EntityFrameworkCore.Tools --version 9.0.0
-dotnet add package Microsoft.VisualStudio.Validation --version 17.9.21
+dotnet add package Microsoft.VisualStudio.Validation --version 17.8.8
 dotnet add package Newtonsoft.Json --version 13.0.3
 Set-Location ..
 
