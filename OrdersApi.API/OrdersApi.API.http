@@ -1,0 +1,32 @@
+@OrdersApi.API_HostAddress = http://localhost:5011
+
+# Get all orders
+GET {{OrdersApi.API_HostAddress}}/api/orders
+Accept: application/json
+
+###
+
+# Get specific orders by IDs
+GET {{OrdersApi.API_HostAddress}}/api/orders?orderIds=00000000-0000-0000-0000-000000000001&orderIds=00000000-0000-0000-0000-000000000002
+Accept: application/json
+
+###
+
+# Create new orders
+POST {{OrdersApi.API_HostAddress}}/api/orders
+Content-Type: application/json
+
+[
+  {
+    "id": "00000000-0000-0000-0000-000000000003",
+    "customerName": "Test Customer 3",
+    "items": [
+      {
+        "productId": "a0000000-0000-0000-0000-000000000003",
+        "quantity": 5
+      }
+    ]
+  }
+]
+
+###
